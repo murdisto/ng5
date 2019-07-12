@@ -25,5 +25,10 @@ export class HomeComponent implements OnInit {
     this.itemCount = this.items.length; //update the item count
   }
   
+  removeItem(i) {
+    this.items.splice(i, 1);
+    this.itemCount = this.items.length;
+  }
+  
 
 }

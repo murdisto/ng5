@@ -18,6 +18,6 @@
     
   </div>
   <div class="col">
-    <p class="life-container" *ngFor="let item of items">{{ item }}</p>
+    <p class="life-container" *ngFor="let item of items; let i = index" (click)="removeItem(i)">{{ item }}</p>
   </div>
 </div>
