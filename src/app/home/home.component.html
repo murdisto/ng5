@@ -3,7 +3,7 @@
     <p>Add an Item</p>
   </div>
   <div class="col">
-    <p>Your List</p>
+    <p>Your List ({{ itemCount }})</p>
   </div>
 </div>
 <div class="container color-light">
@@ -11,9 +11,11 @@
     <p>Use this form to add new item</p>
     
     <form action="">
-      <input type="text" class="txt" name="item" id="" placeholder="Enter the item here">
-      <input type="submit" class="btn" value="Add Item">
+      <input type="text" class="txt" name="item" id="" placeholder="Enter the item here" [(ngModel)]="itemText">
+      <br><span>{{ itemText }}</span>
+      <input type="submit" class="btn" [value]="btnText">
     </form>
+    
   </div>
   <div class="col">
     <p class="life-container">Apples</p>
